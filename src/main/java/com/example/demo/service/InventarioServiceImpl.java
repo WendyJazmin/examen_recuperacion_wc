@@ -49,4 +49,10 @@ public class InventarioServiceImpl implements IInventarioService{
 		// TODO Auto-generated method stub
 		return this.inventarioRepository.buscarTodos();
 	}
+
+	@Override
+	public Inventario buscarCodigoBarras(String codigoBarrasIndividual) {
+		// TODO Auto-generated method stub
+		return this.inventarioRepository.buscarCodigoBarras(codigoBarrasIndividual);
+	}
 }

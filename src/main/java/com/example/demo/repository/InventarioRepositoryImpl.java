@@ -54,4 +54,12 @@ public class InventarioRepositoryImpl implements IInventarioRepository{
 		TypedQuery<Inventario> myQUery = this.entityManager.createQuery("SELECT i FROM Inventario i",Inventario.class);
 		return myQUery.getResultList();
 	}
+
+	@Override
+	public Inventario buscarCodigoBarras(String codigoBarrasIndividual) {
+		// TODO Auto-generated method stub
+		TypedQuery<Inventario> miTypedQuery = this.entityManager.createQuery("select v from Inventario v where v.codigoBarrasIndividual=:codigoBarrasIndividual", Inventario.class);
+		miTypedQuery.setParameter("codigoBarrasIndividual", codigoBarrasIndividual);
+		return miTypedQuery.getSingleResult();
+	}
 }

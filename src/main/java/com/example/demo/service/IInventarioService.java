@@ -14,4 +14,6 @@ public interface IInventarioService {
 	public void eliminar(Integer id);
 	
 	public List<Inventario> buscarTodos();
+	
+	public Inventario buscarCodigoBarras(String codigoBarrasIndividual);
 }

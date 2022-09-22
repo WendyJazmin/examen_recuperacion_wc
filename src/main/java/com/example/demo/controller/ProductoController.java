@@ -41,12 +41,6 @@ public class ProductoController {
 		return "vistainsertarNuevoProducto";
 	}
 
-	//eliminar
-	@DeleteMapping("eliminar/{id}")
-	public String eliminar(@PathVariable("id")Integer id,Model modelo) {
-		String texto = this.iProductoService.eliminarSinRegistro(id);
-		modelo.addAttribute("texto",texto);
-		return "vistaEliminar";
-	}
+	
 	
 }
